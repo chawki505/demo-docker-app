@@ -17,7 +17,7 @@ services:
 		restart: unless-stopped
 		labels:
 		- "traefik.enable=false"
-	  
+		
 networks:
 	default:
 		external:
