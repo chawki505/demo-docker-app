@@ -1,3 +1,5 @@
-# Demo Projet for Devoxx 2018 France.
+# Demo Projet docker
 
 Documentation is here : https://github.com/chawki505/demo-docker/blob/master/README.md
+
+source : https://github.com/Treeptik/devoxx2018-demo

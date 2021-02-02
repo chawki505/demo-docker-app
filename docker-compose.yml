@@ -4,14 +4,14 @@ services:
 		image: treeptik/devoxx2018
 		restart: unless-stopped
 		labels:
-		- "traefik.http.routers.#APP#.rule=Host(`#APP#.localhost`)"
-		- "traefik.http.routers.#APP#.entrypoints=http"
-		- "traefik.http.services.#APP#.loadbalancer.server.port=8080"
+		- "traefik.http.routers.master.rule=Host(`master.localhost`)"
+		- "traefik.http.routers.master.entrypoints=http"
+		- "traefik.http.services.master.loadbalancer.server.port=8080"
 
 	database:
 		image: postgres:10
 		volumes:
-		- "/mnt/btrfs/pg-#APP#:/var/lib/postgresql/data"
+		- "/mnt/btrfs/pg-master:/var/lib/postgresql/data"
 		environment:
 		- POSTGRES_PASSWORD=mysecretpassword
 		restart: unless-stopped
